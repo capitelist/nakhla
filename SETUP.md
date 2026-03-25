@@ -19,10 +19,24 @@ Step-by-step for a teacher to go from zero to Session 1.
 - [ ] Open `tools/translate.html` in your browser and enter the key
 - [ ] Test: type "Hello, friend!" and click Translate
 
-### Kahoot
-- [ ] Create a free account at kahoot.com
-- [ ] Create a new Kahoot using the questions from `content/session-01-greetings/kahoot-questions.json`
-- [ ] Set game options: **no podium, no scoreboard, 30-second timer**
+### Wooclap (Quiz / Engagement)
+- [ ] Create a free account at wooclap.com
+- [ ] Create a new event using the questions from `content/session-01-greetings/kahoot-questions.json`
+- [ ] Add questions as Quiz type — copy question text and answer options from the JSON file
+- [ ] Set options: **no ranking display, 30-second timer, anonymous participation ON**
+- [ ] Test: launch a practice run to confirm students can join via event code
+
+### Padlet (Visual Sharing Board + Portfolio)
+- [ ] Create a free account at padlet.com
+- [ ] Create a board: **"Nakhla — Hello Cards"** (Wall layout)
+- [ ] Set permissions: "Can write" for anyone with link
+- [ ] Enable "Require approval" (teacher approves posts before visible)
+- [ ] Create a sample post showing the Hello Card format (see `content/session-01-greetings/activity-padlet.md`)
+
+### Whereby (Backup Video)
+- [ ] Create a free account at whereby.com
+- [ ] Create a permanent room: **"nakhla-exchange"**
+- [ ] Save the room link as backup in case Google Meet has issues
 
 ### Kialo Edu (Optional)
 - [ ] Create a free teacher account at kialo-edu.com
@@ -58,16 +72,10 @@ Step-by-step for a teacher to go from zero to Session 1.
 - [ ] Create a pre-session assignment: "Write your name and one sentence about where you live"
 - [ ] Schedule materials to release 2 days before Session 1
 
-### Prepare Jamboard/Slides
-- [ ] Create one Google Jamboard (or Slides) per pod using the template in `content/session-01-greetings/activity-jamboard.md`
-- [ ] Set sharing to "Anyone with the link can edit"
-- [ ] Save all links in a shared document for easy access during the session
-
-### Google Sites Portfolio
-- [ ] Create a Google Site: **"Nakhla — [School Name] Portfolio"**
-- [ ] Add pages: Home, Session 1 Gallery, Session 2 Gallery, Session 3 Gallery
-- [ ] Set to "Anyone with the link" can view
-- [ ] Share the link with your co-teacher
+### Prepare Padlet Board
+- [ ] Confirm the Session 1 Padlet board is set up with the Hello Card template
+- [ ] Test: open the Padlet link in an incognito window to verify students can post without login
+- [ ] Save the Padlet link in a shared document for easy access during the session
 
 ---
 
@@ -94,10 +102,12 @@ Step-by-step for a teacher to go from zero to Session 1.
 - [ ] Everyone joins the Google Meet link
 - [ ] Test: can teacher create breakout rooms?
 - [ ] Test: can moderators join/leave breakout rooms?
-- [ ] Test: screen sharing works for Kahoot
-- [ ] Test: Jamboard links open and are editable
+- [ ] Test: screen sharing works for Wooclap
+- [ ] Test: Padlet link opens and students can post without login
+- [ ] Test: Wooclap event code works — moderators join as participants to verify
 - [ ] Test: audio/video quality for all participants
-- [ ] Identify backup plan if Meet fails (WhatsApp voice notes)
+- [ ] Test: Whereby backup room works (everyone joins briefly)
+- [ ] Identify backup plan if Meet fails (Whereby room or WhatsApp voice notes)
 
 ### Student Prep
 - [ ] Tell students about the program — show them the map (Israel + UAE)
@@ -111,8 +121,8 @@ Step-by-step for a teacher to go from zero to Session 1.
 
 ### 30 Minutes Before
 - [ ] Open Google Meet, test audio/video
-- [ ] Open Kahoot game, ready to launch
-- [ ] Open Jamboard links in separate tabs
+- [ ] Open Wooclap event, ready to launch
+- [ ] Open Padlet board in a separate tab
 - [ ] Have discussion prompts printed or on a second screen
 - [ ] Confirm moderators are online
 - [ ] Text partner teacher: "Ready?"
@@ -120,11 +130,12 @@ Step-by-step for a teacher to go from zero to Session 1.
 ### During Session
 - [ ] Follow the Session 1 plan in `program/PROGRAM.md`
 - [ ] Full Group → Pod Pairs → Activity → Wrap-Up
-- [ ] Take a screenshot of each pod's Jamboard for the portfolio
+- [ ] Share Padlet link in chat for the Hello Card activity
 
 ### After Session
 - [ ] Send parent tip via WhatsApp (from `content/session-01-greetings/parent-tip.md`)
-- [ ] Upload Jamboard screenshots to Google Sites
+- [ ] Review and approve any pending Padlet posts
+- [ ] Share the Padlet board link with parents
 - [ ] Post reflection assignment in Google Classroom: "What new word did you learn today?"
 - [ ] Debrief with co-teacher and moderators: what worked? What to adjust?
 - [ ] Confirm date for Session 2

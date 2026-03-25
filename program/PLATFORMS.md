@@ -6,15 +6,18 @@ How to set up and connect all platforms for the Nakhla program. All tools are fr
 
 ## Platform Overview
 
-| Platform | Role | Cost |
-|----------|------|------|
-| Google Classroom | Assignments, worksheets, async work | Free |
-| Google Meet | Live sessions + breakout rooms | Free (Google Workspace for Education) |
-| Google Sites | Student portfolio (replaces Seesaw) | Free |
-| Kahoot | Trilingual quizzes | Free (basic plan) |
-| Kialo Edu | Structured discussion (optional, Session 2–3) | Free |
-| WhatsApp | Parent communication | Free |
-| DeepL API | Translation layer | Free tier (500k chars/month) |
+| Purpose | Tool | Why | Free Tier |
+|---------|------|-----|-----------|
+| LMS / Assignments | Google Classroom | Universal, already deployed | ✅ Free |
+| Video + Breakouts | Google Meet | Built into Classroom | ✅ Free |
+| Simple backup video | Whereby | Permanent links, no account needed | ✅ Free (100 participants) |
+| Quiz / Engagement | Wooclap | Multilingual, calm UX, browser-only | ✅ Free |
+| Structured debate | Kialo Edu | Visual argument trees, educator accounts | ✅ Free |
+| Visual sharing board | Padlet | Student portfolio + discussion, no login needed | ✅ Free (3 boards) |
+| Translation tool | tools/translate.html (DeepL) | Custom, offline-capable | ✅ Free API tier |
+| Translation fallback | Google Translate widget | Zero setup, embed in any page | ✅ Free |
+| Live captions | Google Meet captions | Built in, auto-translate | ✅ Free |
+| Parent comms | WhatsApp group | Both countries native | ✅ Free |
 
 ---
 
@@ -64,8 +67,13 @@ How to set up and connect all platforms for the Nakhla program. All tools are fr
 2. Open breakout rooms at 10:00 mark
 3. Moderators float between rooms (join/leave as needed)
 4. Close breakout rooms at 35:00 — automatic return to main room
-5. Share screen for Kahoot/Jamboard activity
+5. Share screen for Wooclap quiz / Padlet activity
 6. Wrap up in main room
+
+### Live Captions
+- Enable Google Meet captions for automatic transcription during sessions
+- Captions support auto-translate — helpful for multilingual groups
+- No additional setup required; built into Google Meet
 
 ### Technical Requirements
 - Stable internet (recommend wired connection for teachers)
@@ -74,64 +82,66 @@ How to set up and connect all platforms for the Nakhla program. All tools are fr
 
 ---
 
-## 3. Google Sites (Student Portfolio)
+## 3. Whereby (Backup Video)
 
-Replaces Seesaw — free, teacher-moderated, no student accounts needed.
+Simple browser-based video calling — use as backup if Google Meet has issues.
 
 ### Setup
-1. Create one Google Site per class: **"Nakhla — [School Name] Portfolio"**
-2. Add a page per student (teacher creates pages)
-3. Set publishing to "Anyone with the link" (no sign-in required for viewing)
-4. Only teachers can edit (students submit work via Classroom, teacher posts to Site)
+1. Create a free account at whereby.com
+2. Create a permanent room: **"nakhla-exchange"**
+3. Share the room link with co-teacher as backup
 
-### Structure
-```
-Home Page
-├── About Nakhla
-├── Session 1 Gallery
-│   ├── [Student Name] — My Introduction
-│   └── ...
-├── Session 2 Gallery
-│   ├── [Student Name] — My World
-│   └── ...
-├── Session 3 Gallery
-│   ├── [Student Name] — Friendship Postcard
-│   └── ...
-└── Our Words (shared vocabulary wall)
-```
+### Why Whereby
+- Permanent room links — no scheduling needed
+- Works in browser, no app install required
+- Free tier supports up to 100 participants
+- Simpler interface than Zoom — better for kids
+- No student accounts needed
 
-### Moderation
-- Students submit work via Google Classroom assignment
-- Teacher reviews, then copies approved content to Google Sites
-- No direct student access to edit the Site
-- This ensures all published content is age-appropriate and reviewed
+### When to Use
+- Google Meet is down or unreachable for some students
+- Partner school can't access Google Workspace
+- Quick ad-hoc meetings between sessions
 
 ---
 
-## 4. Kahoot
+## 4. Wooclap (Quiz / Engagement)
+
+Replaces Kahoot — calmer UX, multilingual, no app install needed.
 
 ### Setup
-1. Create a free Kahoot account at kahoot.com
-2. Create one Kahoot per session using `kahoot-questions.json` from each content pack
-3. Settings for each Kahoot:
-   - **Game mode:** Classic (individual)
-   - **Show scoreboard between questions:** OFF (trauma-aware — no competitive pressure)
+1. Create a free account at wooclap.com
+2. Create one event per session using the questions from `kahoot-questions.json` in each content pack
+3. Settings for each quiz:
+   - **Question type:** Quiz (multiple choice)
    - **Timer:** 30 seconds per question
-   - **Points:** OFF (or hidden from players)
-   - **Music:** ON (gentle, not startling)
+   - **Show ranking:** OFF (trauma-aware — no competitive pressure)
+   - **Allow anonymous participation:** ON
 
-### Running Kahoot in Session
-1. Teacher opens Kahoot on their screen, shares via Google Meet screen share
-2. Students join on their devices via kahoot.it + game PIN
+### Running Wooclap in Session
+1. Teacher opens Wooclap event on their screen, shares via Google Meet screen share
+2. Students join on their devices via wooclap.com + event code (displayed on screen)
 3. Questions display in English; answer options include Hebrew and Arabic text
 4. After each question, teacher reads answers aloud in all 3 languages
 5. At the end, celebrate participation (not scores)
 
-### Creating Trilingual Questions
-- Use the `kahoot-questions.json` file from each session's content pack
-- Question text: English
-- Answer options: mix of Hebrew, Arabic, and English
-- Add images where possible (food, flags, landmarks)
+### Additional Wooclap Features
+- **Word Cloud:** Ask "What's one word that describes today?" — responses appear as a live word cloud (great for warm-ups and wrap-ups)
+- **Open Question:** Students type responses that the teacher can display and discuss
+- **Polling:** Quick yes/no or multiple choice polls during sessions
+
+### Why Wooclap Over Kahoot
+- No app install — works entirely in browser
+- Calmer interface — less frenetic, better for 8–12 year olds
+- Built-in multilingual support
+- Word clouds and polls in addition to quizzes
+- No student accounts needed
+
+### Importing Questions
+- The `kahoot-questions.json` files contain quiz questions formatted for import
+- In Wooclap: Create event → Add questions → use Quiz type
+- Copy question text and answer options from the JSON file
+- Mark the correct answer for each question
 
 ---
 
@@ -158,7 +168,45 @@ Home Page
 
 ---
 
-## 6. WhatsApp
+## 6. Padlet (Visual Sharing Board + Portfolio)
+
+Replaces Google Jamboard (discontinued Nov 2024) and Google Sites. Padlet serves as both the collaborative activity board during sessions and the student portfolio.
+
+### Setup
+1. Create a free account at padlet.com (free tier allows 3 boards)
+2. Create one Padlet board per session:
+   - **Session 1:** "Nakhla — Hello Cards" (Wall layout)
+   - **Session 2:** "Nakhla — Our World" (Grid layout)
+   - **Session 3:** "Nakhla — Friendship Postcards" (Wall layout)
+3. Board settings:
+   - **Content filtering:** ON (auto-filters inappropriate content)
+   - **Require approval:** ON (teacher approves posts before visible)
+   - **Allow reactions:** ON (hearts/stars)
+   - **Attribution:** First name only
+   - **Posting permissions:** "Can write" for anyone with link
+
+### Using Padlet During Sessions
+1. Teacher shares the Padlet link in Google Meet chat
+2. Students open on their devices — no account needed
+3. Students post text, images, drawings, or voice recordings
+4. Teacher approves posts in real-time during the activity
+5. Teacher screen-shares the Padlet for the full group to see
+
+### Portfolio Use
+- Each session's Padlet board becomes a gallery of student work
+- Share board links with parents after sessions
+- Teacher can download boards as PDF/image for archiving
+- No separate portfolio tool needed — Padlet IS the portfolio
+
+### Tips
+- Free tier: 3 boards (one per session — perfect fit)
+- Students can post voice recordings in their own language
+- Use the "Remake" feature to create boards from a template
+- Boards remain accessible after the program ends
+
+---
+
+## 7. WhatsApp
 
 ### Setup
 1. Create one WhatsApp group per class: **"Nakhla Parents — [School Name]"**
@@ -172,7 +220,7 @@ Home Page
 | 1 week before Session 1 | Welcome message + program overview | Coordinator |
 | 2 days before each session | Reminder + "ask your child about…" prompt | Teacher |
 | After each session | Parent tip (from `parent-tip.md`) | Teacher |
-| After Session 3 | Thank you + portfolio link + certificate | Coordinator |
+| After Session 3 | Thank you + portfolio links (Padlet) + certificate | Coordinator |
 
 ### Message Templates
 Messages should be trilingual. Use the DeepL translation tool (`tools/translate.html`) to prepare messages.
@@ -190,9 +238,9 @@ EN: Your child will be part of a cultural exchange with children from [country].
 
 ---
 
-## 7. DeepL API (Translation Layer)
+## 8. Translation Layer
 
-### Setup
+### DeepL API (Primary)
 1. Sign up for DeepL API Free at deepl.com/pro-api
 2. Get your API key from the account settings
 3. Open `tools/translate.html` in a browser
@@ -211,9 +259,16 @@ EN: Your child will be part of a cultural exchange with children from [country].
 | Arabic | AR |
 
 ### Limitations
-- DeepL free tier has no Hebrew support as of 2025 — use Google Translate API as fallback for Hebrew
+- DeepL free tier has no Hebrew support as of 2025 — use Google Translate as fallback for Hebrew
 - Arabic support is available
 - For the content packs, translations are pre-prepared (no API needed during sessions)
+
+### Google Translate Widget (Fallback)
+If DeepL is unavailable or Hebrew translation is needed:
+1. Go to translate.google.com — no account needed
+2. Supports Hebrew, Arabic, and English with no character limits
+3. For embedding in materials: use the Google Translate website directly
+4. No API key required — zero setup
 
 ---
 
@@ -236,15 +291,17 @@ EN: Your child will be part of a cultural exchange with children from [country].
 │       │                                               │
 │       ├──→ Breakout rooms ──→ Pod pairs               │
 │       │                                               │
-│       └──→ Screen share ──→ Kahoot / Jamboard         │
+│       └──→ Screen share ──→ Wooclap / Padlet          │
+│                                                       │
+│  (Whereby available as backup if Meet fails)          │
 └───────────────────────┬─────────────────────────────┘
                         │
 ┌───────────────────────▼─────────────────────────────┐
 │                    AFTER SESSION                      │
 │                                                       │
 │  Google Classroom ──→ Collect reflections             │
-│  Google Sites ──→ Publish approved student work       │
-│  WhatsApp ──→ Send parent tip                         │
+│  Padlet ──→ Portfolio of approved student work        │
+│  WhatsApp ──→ Send parent tip + Padlet link           │
 │  Kialo Edu ──→ Continue async discussion              │
 └─────────────────────────────────────────────────────┘
 ```
