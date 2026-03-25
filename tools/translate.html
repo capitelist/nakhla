@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nakhla Translator</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f5f0;
+    color: #333;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+    color: #2E7D32;
+    margin-bottom: 5px;
+    font-size: 24px;
+  }
+  .subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  .api-key-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .api-key-section label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .api-key-section input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .api-key-section .hint {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .input-section {
+    margin-bottom: 20px;
+  }
+  textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: vertical;
+    font-family: inherit;
+  }
+  .source-lang {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .source-lang select {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  button {
+    background: #2E7D32;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  button:hover { background: #1B5E20; }
+  button:disabled { background: #999; cursor: not-allowed; }
+  .results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .result-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 100px;
+  }
+  .result-card h3 {
+    font-size: 14px;
+    color: #2E7D32;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+  .result-card .text {
+    font-size: 16px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .result-card .text[dir="rtl"] { text-align: right; }
+  .error {
+    background: #ffebee;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 15px;
+    display: none;
+  }
+  .loading { opacity: 0.6; }
+  @media (max-width: 600px) {
+    .results { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<h1>🌴 Nakhla Translator</h1>
+<p class="subtitle">Hebrew · Arabic · English — Side by Side</p>
+
+<div class="api-key-section">
+  <label for="apiKey">DeepL API Key</label>
+  <input type="password" id="apiKey" placeholder="Enter your DeepL API Free key">
+  <p class="hint">Stored in your browser only (localStorage). Get a free key at deepl.com/pro-api</p>
+</div>
+
+<div class="input-section">
+  <textarea id="inputText" placeholder="Type or paste text to translate..."></textarea>
+  <div class="source-lang">
+    <label for="sourceLang">Source language:</label>
+    <select id="sourceLang">
+      <option value="auto">Auto-detect</option>
+      <option value="EN">English</option>
+      <option value="HE">Hebrew</option>
+      <option value="AR">Arabic</option>
+    </select>
+  </div>
+  <button id="translateBtn" onclick="translate()">Translate</button>
+</div>
+
+<div class="error" id="error"></div>
+
+<div class="results" id="results" style="display:none;">
+  <div class="result-card">
+    <h3>English</h3>
+    <div class="text" id="resultEN" dir="ltr"></div>
+  </div>
+  <div class="result-card">
+    <h3>עברית (Hebrew)</h3>
+    <div class="text" id="resultHE" dir="rtl"></div>
+  </div>
+  <div class="result-card">
+    <h3>العربية (Arabic)</h3>
+    <div class="text" id="resultAR" dir="rtl"></div>
+  </div>
+</div>
+
+<script>
+  // Load saved API key
+  const apiKeyInput = document.getElementById('apiKey');
+  const saved = localStorage.getItem('nakhla_deepl_key');
+  if (saved) apiKeyInput.value = saved;
+
+  apiKeyInput.addEventListener('change', () => {
+    localStorage.setItem('nakhla_deepl_key', apiKeyInput.value.trim());
+  });
+
+  async function callDeepL(text, targetLang, sourceLang, apiKey) {
+    const params = new URLSearchParams();
+    params.append('text', text);
+    params.append('target_lang', targetLang);
+    if (sourceLang && sourceLang !== 'auto') {
+      params.append('source_lang', sourceLang);
+    }
+
+    const baseUrl = apiKey.endsWith(':fx')
+      ? 'https://api-free.deepl.com'
+      : 'https://api.deepl.com';
+
+    const res = await fetch(`${baseUrl}/v2/translate`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `DeepL-Auth-Key ${apiKey}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: params.toString(),
+    });
+
+    if (!res.ok) {
+      const err = await res.text();
+      throw new Error(`DeepL API error (${res.status}): ${err}`);
+    }
+
+    const data = await res.json();
+    return data.translations[0].text;
+  }
+
+  async function translate() {
+    const apiKey = apiKeyInput.value.trim();
+    if (!apiKey) {
+      showError('Please enter your DeepL API key.');
+      return;
+    }
+    localStorage.setItem('nakhla_deepl_key', apiKey);
+
+    const text = document.getElementById('inputText').value.trim();
+    if (!text) {
+      showError('Please enter text to translate.');
+      return;
+    }
+
+    const sourceLang = document.getElementById('sourceLang').value;
+    const btn = document.getElementById('translateBtn');
+    const resultsDiv = document.getElementById('results');
+    const errorDiv = document.getElementById('error');
+
+    btn.disabled = true;
+    btn.textContent = 'Translating...';
+    errorDiv.style.display = 'none';
+    resultsDiv.style.display = 'none';
+
+    const targets = ['EN', 'HE', 'AR'];
+    const results = {};
+
+    try {
+      // Translate to all 3 languages in parallel
+      // If source matches a target, use original text
+      const promises = targets.map(async (lang) => {
+        if (sourceLang === lang) {
+          results[lang] = text;
+        } else {
+          try {
+            results[lang] = await callDeepL(text, lang, sourceLang, apiKey);
+          } catch (e) {
+            // Some languages may not be supported — fall back gracefully
+            results[lang] = `[Translation unavailable: ${e.message}]`;
+          }
+        }
+      });
+
+      await Promise.all(promises);
+
+      document.getElementById('resultEN').textContent = results['EN'] || '';
+      document.getElementById('resultHE').textContent = results['HE'] || '';
+      document.getElementById('resultAR').textContent = results['AR'] || '';
+      resultsDiv.style.display = 'grid';
+    } catch (e) {
+      showError(e.message);
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Translate';
+  }
+
+  function showError(msg) {
+    const errorDiv = document.getElementById('error');
+    errorDiv.textContent = msg;
+    errorDiv.style.display = 'block';
+  }
+
+  // Allow Ctrl/Cmd+Enter to translate
+  document.getElementById('inputText').addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+      translate();
+    }
+  });
+</script>
+
+</body>
+</html>

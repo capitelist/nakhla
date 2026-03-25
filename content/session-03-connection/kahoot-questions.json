@@ -1,0 +1,106 @@
+{
+  "title": "Nakhla Session 3: Friends Across the Shore!",
+  "description": "Final review quiz — everything we learned across all 3 sessions",
+  "questions": [
+    {
+      "question": "How do you say 'Friendship' in Hebrew?",
+      "answers": [
+        { "text": "חֲבֵרוּת (Chaverut)", "correct": true },
+        { "text": "صَدَاقَة (Sadaqa)", "correct": false },
+        { "text": "מִשְׁפָּחָה (Mishpacha)", "correct": false },
+        { "text": "عَائِلَة (A'ila)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "How do you say 'Friendship' in Arabic?",
+      "answers": [
+        { "text": "حُلْم (Hulm)", "correct": false },
+        { "text": "صَدَاقَة (Sadaqa)", "correct": true },
+        { "text": "חֲבֵרוּת (Chaverut)", "correct": false },
+        { "text": "هَدِيَّة (Hadiyya)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "Review! How do you say 'Thank you' in Hebrew?",
+      "answers": [
+        { "text": "שָׁלוֹם (Shalom)", "correct": false },
+        { "text": "תּוֹדָה (Toda)", "correct": true },
+        { "text": "شُكْرًا (Shukran)", "correct": false },
+        { "text": "בְּבַקָּשָׁה (Bevakasha)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "Review! How do you say 'Delicious' in Arabic?",
+      "answers": [
+        { "text": "لَذِيذ (Ladhidh)", "correct": true },
+        { "text": "טָעִים (Ta'im)", "correct": false },
+        { "text": "طَعَام (Ta'aam)", "correct": false },
+        { "text": "أٹكل (Okhel)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What does 'Yachad' (יַחַד) mean?",
+      "answers": [
+        { "text": "Dream", "correct": false },
+        { "text": "Gift", "correct": false },
+        { "text": "Together", "correct": true },
+        { "text": "Memory", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What does 'Hadiyya' (هَدِيَّة) mean?",
+      "answers": [
+        { "text": "Visit", "correct": false },
+        { "text": "Gift", "correct": true },
+        { "text": "Friendship", "correct": false },
+        { "text": "Together", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "'Shalom' and 'Salama' both come from a root meaning…",
+      "answers": [
+        { "text": "Peace", "correct": true },
+        { "text": "Food", "correct": false },
+        { "text": "Music", "correct": false },
+        { "text": "Game", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What grows in BOTH Israel and the UAE? (Hint: it's our program name!)",
+      "answers": [
+        { "text": "Apple trees", "correct": false },
+        { "text": "Date palms 🌴", "correct": true },
+        { "text": "Pine trees", "correct": false },
+        { "text": "Cherry blossoms", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "How do you say 'Let's stay friends' in Hebrew?",
+      "answers": [
+        { "text": "לְהִתְרָאוֹת (Lehitra'ot)", "correct": false },
+        { "text": "בּוֹא נִשָּׁאֵר חֲבֵרִים (Bo nisha'er chaverim)", "correct": true },
+        { "text": "لِنَبْقَ أَصْدِقَاء (Linabqa asdiqaa')", "correct": false },
+        { "text": "נָעִים מְאוֹד (Na'im me'od)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What's the most important thing we learned in Nakhla?",
+      "answers": [
+        { "text": "We have more in common than we think!", "correct": true },
+        { "text": "Hebrew is hard", "correct": false },
+        { "text": "Arabic is hard", "correct": false },
+        { "text": "English is the best language", "correct": false }
+      ],
+      "timeLimit": 30
+    }
+  ]
+}

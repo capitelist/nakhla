@@ -1,0 +1,106 @@
+{
+  "title": "Nakhla Session 1: Hello, Neighbor!",
+  "description": "Trilingual quiz about greetings and introductions",
+  "questions": [
+    {
+      "question": "How do you say 'Hello' in Hebrew?",
+      "answers": [
+        { "text": "שָׁלוֹם (Shalom)", "correct": true },
+        { "text": "تَشَرَّفْنَا (Tasharrafna)", "correct": false },
+        { "text": "תּוֹדָה (Toda)", "correct": false },
+        { "text": "لا (La)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "How do you say 'Hello' in Arabic?",
+      "answers": [
+        { "text": "شُكْرًا (Shukran)", "correct": false },
+        { "text": "مَرْحَبًا (Marhaba)", "correct": true },
+        { "text": "כֵּן (Ken)", "correct": false },
+        { "text": "نَعَم (Na'am)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What does 'Toda' (תּוֹדָה) mean in English?",
+      "answers": [
+        { "text": "Hello", "correct": false },
+        { "text": "Goodbye", "correct": false },
+        { "text": "Thank you", "correct": true },
+        { "text": "Please", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What does 'Shukran' (شُكْرًا) mean in English?",
+      "answers": [
+        { "text": "Yes", "correct": false },
+        { "text": "Thank you", "correct": true },
+        { "text": "Friend", "correct": false },
+        { "text": "No", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "How do you say 'My name is...' in Hebrew?",
+      "answers": [
+        { "text": "לְהִתְרָאוֹת (Lehitra'ot)", "correct": false },
+        { "text": "...שְׁמִי (Shmi...)", "correct": true },
+        { "text": "...اِسْمِي (Ismi...)", "correct": false },
+        { "text": "נָעִים מְאוֹד (Na'im me'od)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "How do you say 'Friend' in Arabic?",
+      "answers": [
+        { "text": "صَدِيق (Sadiq)", "correct": true },
+        { "text": "חָבֵר (Chaver)", "correct": false },
+        { "text": "مِنْ فَضْلِك (Min fadlak)", "correct": false },
+        { "text": "שָׁלוֹם (Shalom)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What does 'Na'im me'od' (נָעִים מְאוֹד) mean?",
+      "answers": [
+        { "text": "Goodbye", "correct": false },
+        { "text": "Where do you live?", "correct": false },
+        { "text": "Nice to meet you", "correct": true },
+        { "text": "Thank you", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "How do you say 'Goodbye' in Arabic?",
+      "answers": [
+        { "text": "مَرْحَبًا (Marhaba)", "correct": false },
+        { "text": "שָׁלוֹם (Shalom)", "correct": false },
+        { "text": "مَعَ السَّلَامَة (Ma'a as-salama)", "correct": true },
+        { "text": "شُكْرًا (Shukran)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "Which pair both mean 'Yes'?",
+      "answers": [
+        { "text": "כֵּן (Ken) + نَعَم (Na'am)", "correct": true },
+        { "text": "לֹא (Lo) + لا (La)", "correct": false },
+        { "text": "תּוֹדָה (Toda) + شُكْرًا (Shukran)", "correct": false },
+        { "text": "שָׁלוֹם (Shalom) + مَرْحَبًا (Marhaba)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What do 'Shalom' and 'Ma'a as-salama' have in common?",
+      "answers": [
+        { "text": "They both mean 'food'", "correct": false },
+        { "text": "They both come from a root meaning 'peace'", "correct": true },
+        { "text": "They both mean 'thank you'", "correct": false },
+        { "text": "They are the same word", "correct": false }
+      ],
+      "timeLimit": 30
+    }
+  ]
+}

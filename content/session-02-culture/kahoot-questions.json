@@ -1,0 +1,106 @@
+{
+  "title": "Nakhla Session 2: Our World!",
+  "description": "Trilingual quiz about food, family, music, and games",
+  "questions": [
+    {
+      "question": "How do you say 'Food' in Hebrew?",
+      "answers": [
+        { "text": "אֹכֶל (Okhel)", "correct": true },
+        { "text": "طَعَام (Ta'aam)", "correct": false },
+        { "text": "מוּזִיקָה (Muzika)", "correct": false },
+        { "text": "لُعْبَة (Lu'ba)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "How do you say 'Family' in Arabic?",
+      "answers": [
+        { "text": "مُوسِيقَى (Musiqa)", "correct": false },
+        { "text": "عَائِلَة (A'ila)", "correct": true },
+        { "text": "מִשְׁפָּחָה (Mishpacha)", "correct": false },
+        { "text": "صَدِيق (Sadiq)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What does 'Ta'im' (טָעִים) mean?",
+      "answers": [
+        { "text": "Music", "correct": false },
+        { "text": "Game", "correct": false },
+        { "text": "Delicious", "correct": true },
+        { "text": "Brother", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What does 'Ladhidh' (لَذِيذ) mean?",
+      "answers": [
+        { "text": "Delicious", "correct": true },
+        { "text": "Family", "correct": false },
+        { "text": "Food", "correct": false },
+        { "text": "Sister", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "Which food is popular in BOTH Israel and the UAE?",
+      "answers": [
+        { "text": "Sushi", "correct": false },
+        { "text": "Hummus (חומוס / حُمُّص)", "correct": true },
+        { "text": "Tacos", "correct": false },
+        { "text": "Pasta", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "How do you say 'Mom' in Hebrew?",
+      "answers": [
+        { "text": "אָחוֹת (Achot)", "correct": false },
+        { "text": "أُمّ (Umm)", "correct": false },
+        { "text": "אִמָּא (Ima)", "correct": true },
+        { "text": "أُخْت (Ukht)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "How do you say 'Brother' in Arabic?",
+      "answers": [
+        { "text": "أَب (Ab)", "correct": false },
+        { "text": "אָח (Ach)", "correct": false },
+        { "text": "أَخ (Akh)", "correct": true },
+        { "text": "أُمّ (Umm)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "What does 'Hayya nal'ab!' (هَيَّا نَلْعَب!) mean?",
+      "answers": [
+        { "text": "Let's eat!", "correct": false },
+        { "text": "Let's play!", "correct": true },
+        { "text": "Let's sing!", "correct": false },
+        { "text": "Goodbye!", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "Which word sounds similar in both Hebrew and Arabic?",
+      "answers": [
+        { "text": "Muzika / Musiqa (Music)", "correct": true },
+        { "text": "Okhel / Ta'aam (Food)", "correct": false },
+        { "text": "Ima / Umm (Mom)", "correct": false },
+        { "text": "Ken / Na'am (Yes)", "correct": false }
+      ],
+      "timeLimit": 30
+    },
+    {
+      "question": "The date palm (نخلة / דקל) grows in both Israel and the UAE. True or false?",
+      "answers": [
+        { "text": "True!", "correct": true },
+        { "text": "False — only in the UAE", "correct": false },
+        { "text": "False — only in Israel", "correct": false },
+        { "text": "False — it grows in neither", "correct": false }
+      ],
+      "timeLimit": 30
+    }
+  ]
+}
