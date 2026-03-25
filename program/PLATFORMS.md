@@ -9,14 +9,12 @@ How to set up and connect all platforms for the Nakhla program. All tools are fr
 | Purpose | Tool | Why | Free Tier |
 |---------|------|-----|-----------|
 | LMS / Assignments | Google Classroom | Universal, already deployed | ✅ Free |
-| Video + Breakouts | Google Meet | Built into Classroom | ✅ Free |
-| Simple backup video | Whereby | Permanent links, no account needed | ✅ Free (100 participants) |
-| Quiz / Engagement | Wooclap | Multilingual, calm UX, browser-only | ✅ Free |
-| Structured debate | Kialo Edu | Visual argument trees, educator accounts | ✅ Free |
+| Quizzes / Engagement | Blooket | Game-based, fun for ages 8–12, browser-only | ✅ Free |
 | Visual sharing board | Padlet | Student portfolio + discussion, no login needed | ✅ Free (3 boards) |
+| Live video + breakouts | Zoom | Industry standard, Interpretation channels for multilingual | ✅ Free (40 min) |
+| Async pen pals / video | Microsoft Flip | Moderated video messages, parent-visible, educator-free | ✅ Free |
+| Cultural videos | YouTube unlisted playlists | No accounts needed to view, embed in Classroom | ✅ Free |
 | Translation tool | tools/translate.html (DeepL) | Custom, offline-capable | ✅ Free API tier |
-| Translation fallback | Google Translate widget | Zero setup, embed in any page | ✅ Free |
-| Live captions | Google Meet captions | Built in, auto-translate | ✅ Free |
 | Parent comms | WhatsApp group | Both countries native | ✅ Free |
 
 ---
@@ -25,168 +23,88 @@ How to set up and connect all platforms for the Nakhla program. All tools are fr
 
 ### Setup
 1. Create a Google Workspace for Education account (or use existing school account)
-2. Create one Classroom per exchange cohort: **"Nakhla Exchange — [Cohort Name]"**
-3. Add both Israeli and Emirati teachers as co-teachers
-4. Invite all students via class code
+2. Create **two** classrooms — one per country:
+   - **"Nakhla — Israel Class"**
+   - **"Nakhla — UAE Class"**
+3. Add partner teacher as co-teacher in both classrooms
+4. Share join codes with students in each country
+5. Optionally create a third "combined" classroom for shared assignments
 
-### Structure
+### Assignment Workflow
 - **Topic per session:** "Session 1: Hello Neighbor", "Session 2: Our World", "Session 3: Friends Across the Shore"
 - **Post types:**
-  - **Material:** Vocab sheets (upload the .md files as Google Docs)
+  - **Material:** Vocab sheets (upload the .md files as Google Docs), YouTube playlist links, Padlet board links
   - **Assignment:** Pre-session worksheet (complete before live session)
   - **Assignment:** Post-session reflection ("Write one thing you learned")
+  - **Assignment:** Microsoft Flip video prompt (link to Flip topic)
 - **Stream settings:** Only teachers can post; students can comment
 
 ### Tips
 - Upload vocab files as Google Docs (convert from Markdown)
 - Use the "Schedule" feature to release materials 2 days before each session
+- Embed YouTube playlist links and Padlet links directly in assignments
 - Create a shared Google Drive folder per cohort for moderator resources
 
 ---
 
-## 2. Google Meet
+## 2. Blooket (Quiz / Engagement)
+
+Game-based quiz platform — more engaging than traditional quizzes for ages 8–12.
 
 ### Setup
-1. Create recurring meeting links (one per session date)
-2. Enable breakout rooms (requires Google Workspace for Education)
-3. Set up one breakout room per pod (2 Israeli + 2 Emirati kids)
+1. Create a free teacher account at blooket.com
+2. Create one **Question Set** per session using the questions from `kahoot-questions.json` in each content pack
+3. To import questions:
+   - Go to **Create** → **Create a Set**
+   - Title: "Nakhla Session 1: Hello, Neighbor!" (etc.)
+   - Add questions manually from the JSON file — copy question text, answer options, and mark correct answers
+   - Save the set
 
-### Breakout Room Configuration
-- **Number of rooms:** Total students ÷ 4 (round up)
-- **Assignment:** Manual — teacher pre-assigns students to pods
-- **Timer:** Set to 25 minutes (pod pair block)
-- **Allow participants to return to main room:** Yes
+### Running Blooket in Session
+1. From your dashboard, click the Question Set → **Host**
+2. Choose a game mode:
+   - **Gold Quest** — recommended for Nakhla (collaborative feel, less competitive)
+   - **Tower Defense** — good alternative (strategy + knowledge)
+   - Avoid **Battle Royale** or elimination modes (trauma-aware — no competitive pressure)
+3. Students join at **play.blooket.com** + enter the Game ID displayed on screen
+4. No student accounts needed — they enter a nickname only
+5. Teacher shares screen via Zoom so everyone can see the game progress
+6. After each question, teacher reads answers aloud in all 3 languages
 
-### Rotation Between Sessions
-- Between Session 1 and 2: rotate half the Israeli kids to new pods
-- Between Session 2 and 3: keep Session 2 pods (familiarity for final session)
-- Document pod assignments in a shared spreadsheet
-
-### During Session
-1. Start in main room (Full Group block)
-2. Open breakout rooms at 10:00 mark
-3. Moderators float between rooms (join/leave as needed)
-4. Close breakout rooms at 35:00 — automatic return to main room
-5. Share screen for Wooclap quiz / Padlet activity
-6. Wrap up in main room
-
-### Live Captions
-- Enable Google Meet captions for automatic transcription during sessions
-- Captions support auto-translate — helpful for multilingual groups
-- No additional setup required; built into Google Meet
-
-### Technical Requirements
-- Stable internet (recommend wired connection for teachers)
-- Camera on (encouraged, not required for kids)
-- Microphone: push-to-talk recommended for large group; open mic in breakouts
-
----
-
-## 3. Whereby (Backup Video)
-
-Simple browser-based video calling — use as backup if Google Meet has issues.
-
-### Setup
-1. Create a free account at whereby.com
-2. Create a permanent room: **"nakhla-exchange"**
-3. Share the room link with co-teacher as backup
-
-### Why Whereby
-- Permanent room links — no scheduling needed
-- Works in browser, no app install required
-- Free tier supports up to 100 participants
-- Simpler interface than Zoom — better for kids
-- No student accounts needed
-
-### When to Use
-- Google Meet is down or unreachable for some students
-- Partner school can't access Google Workspace
-- Quick ad-hoc meetings between sessions
-
----
-
-## 4. Wooclap (Quiz / Engagement)
-
-Replaces Kahoot — calmer UX, multilingual, no app install needed.
-
-### Setup
-1. Create a free account at wooclap.com
-2. Create one event per session using the questions from `kahoot-questions.json` in each content pack
-3. Settings for each quiz:
-   - **Question type:** Quiz (multiple choice)
-   - **Timer:** 30 seconds per question
-   - **Show ranking:** OFF (trauma-aware — no competitive pressure)
-   - **Allow anonymous participation:** ON
-
-### Running Wooclap in Session
-1. Teacher opens Wooclap event on their screen, shares via Google Meet screen share
-2. Students join on their devices via wooclap.com + event code (displayed on screen)
-3. Questions display in English; answer options include Hebrew and Arabic text
-4. After each question, teacher reads answers aloud in all 3 languages
-5. At the end, celebrate participation (not scores)
-
-### Additional Wooclap Features
-- **Word Cloud:** Ask "What's one word that describes today?" — responses appear as a live word cloud (great for warm-ups and wrap-ups)
-- **Open Question:** Students type responses that the teacher can display and discuss
-- **Polling:** Quick yes/no or multiple choice polls during sessions
-
-### Why Wooclap Over Kahoot
+### Why Blooket
 - No app install — works entirely in browser
-- Calmer interface — less frenetic, better for 8–12 year olds
-- Built-in multilingual support
-- Word clouds and polls in addition to quizzes
+- Game-based format keeps 8–12 year olds engaged
+- Multiple game modes — teacher controls the competitive level
 - No student accounts needed
+- Free tier allows unlimited games with up to 60 players
 
-### Importing Questions
-- The `kahoot-questions.json` files contain quiz questions formatted for import
-- In Wooclap: Create event → Add questions → use Quiz type
-- Copy question text and answer options from the JSON file
-- Mark the correct answer for each question
-
----
-
-## 5. Kialo Edu
-
-### Setup
-1. Create a free teacher account at kialo-edu.com
-2. Create a discussion per session (optional — best suited for Session 2 and 3)
-3. Add students via class link (no student accounts needed)
-
-### Discussion Topics (Non-Political)
-- Session 2: "What makes a food 'special' to a culture?"
-- Session 3: "What's the best way to stay friends with someone far away?"
-
-### Settings
-- Teacher moderates all claims before they appear
-- Keep tree depth shallow (max 2 levels for this age group)
-- Provide sentence starters: "I think… because…", "I agree with… and also…"
-
-### Notes
-- Kialo is optional — use only if students are comfortable with written English
-- Can be done asynchronously between sessions as homework
-- Teacher should pre-populate 2–3 starter claims
+### Question Set Notes
+- The `kahoot-questions.json` files contain all questions, answers, and correct flags
+- Each session also has a `blooket-setup.md` with step-by-step instructions
+- Questions include Hebrew and Arabic script with transliterations
 
 ---
 
-## 6. Padlet (Visual Sharing Board + Portfolio)
+## 3. Padlet (Visual Sharing Board + Portfolio)
 
-Replaces Google Jamboard (discontinued Nov 2024) and Google Sites. Padlet serves as both the collaborative activity board during sessions and the student portfolio.
+Padlet serves as both the collaborative activity board during sessions and the student portfolio.
 
 ### Setup
 1. Create a free account at padlet.com (free tier allows 3 boards)
 2. Create one Padlet board per session:
    - **Session 1:** "Nakhla — Hello Cards" (Wall layout)
-   - **Session 2:** "Nakhla — Our World" (Grid layout)
+   - **Session 2:** "Nakhla — Our World" (Grid layout, 4 columns)
    - **Session 3:** "Nakhla — Friendship Postcards" (Wall layout)
 3. Board settings:
    - **Content filtering:** ON (auto-filters inappropriate content)
-   - **Require approval:** ON (teacher approves posts before visible)
+   - **Require approval:** ON (teacher approves posts before visible — "Moderated" mode)
    - **Allow reactions:** ON (hearts/stars)
    - **Attribution:** First name only
    - **Posting permissions:** "Can write" for anyone with link
+4. Share the Padlet link in Google Classroom under each session's Topic
 
 ### Using Padlet During Sessions
-1. Teacher shares the Padlet link in Google Meet chat
+1. Teacher shares the Padlet link in Zoom chat
 2. Students open on their devices — no account needed
 3. Students post text, images, drawings, or voice recordings
 4. Teacher approves posts in real-time during the activity
@@ -206,7 +124,136 @@ Replaces Google Jamboard (discontinued Nov 2024) and Google Sites. Padlet serves
 
 ---
 
-## 7. WhatsApp
+## 4. Zoom (Live Sessions + Interpretation)
+
+### Setup
+1. Create a free Zoom account (or use school account)
+2. Schedule a **recurring meeting** for all 3 sessions
+3. Enable **Interpretation** feature:
+   - Go to **Settings** → **In Meeting (Advanced)** → **Language Interpretation** → Toggle ON
+   - When scheduling the meeting, click **Interpretation** and add channels:
+     - **Hebrew** (interpreter: Israeli teacher or bilingual moderator)
+     - **Arabic** (interpreter: Emirati teacher or bilingual moderator)
+     - **English** (default floor language)
+4. Share the meeting link in both Google Classrooms
+
+### Interpretation Channels — How It Works
+1. During the meeting, interpreters join their assigned language channel
+2. Interpreter hears the floor audio and speaks the translation into their channel
+3. Students click the **Interpretation** globe icon in their Zoom toolbar
+4. They select their preferred language channel to hear translation
+5. Floor language (English) is always available as default
+6. **Tip:** If you don't have live interpreters, students can use the English floor and help each other translate in breakouts
+
+### Breakout Rooms
+1. **Number of rooms:** Total students ÷ 4 (round up)
+2. **Assignment:** Manual — teacher pre-assigns students to pods (2 Israeli + 2 Emirati per pod)
+3. **Timer:** Set to 25 minutes (pod pair block)
+4. **Allow participants to return to main room:** Yes
+5. Moderators float between rooms (join/leave as needed)
+
+### Rotation Between Sessions
+- Between Session 1 and 2: rotate half the Israeli kids to new pods
+- Between Session 2 and 3: keep Session 2 pods (familiarity for final session)
+- Document pod assignments in a shared spreadsheet
+
+### During Session
+1. Start in main room (Full Group block)
+2. Remind students about the Interpretation globe icon
+3. Open breakout rooms at 10:00 mark
+4. Moderators float between rooms
+5. Close breakout rooms at 35:00 — automatic return to main room
+6. Share screen for Blooket quiz / Padlet activity
+7. Wrap up in main room
+
+### Free Tier Notes
+- Free Zoom: 40-minute limit on group meetings
+- Nakhla sessions are 60 minutes — you need Zoom Pro ($13.99/mo) OR:
+  - Ask school IT if they have a Zoom Education license (free for K-12)
+  - Split session into two 40-min meetings with a break
+  - Many schools already have Zoom Pro
+
+---
+
+## 5. Microsoft Flip (Async Pen Pals / Video Messages)
+
+Free moderated video discussion platform for educators. Students record short videos; teacher approves before publishing.
+
+### Setup
+1. Go to **flip.com** and sign in with a Microsoft or Google educator account (free)
+2. Create a **Group**: "Nakhla Exchange"
+3. Create one **Topic** per session:
+   - **Topic 1:** "Hello! Introduce Yourself" (Session 1)
+   - **Topic 2:** "My World — Food, Family, Traditions" (Session 2)
+   - **Topic 3:** "Message to My Pen Pal" (Session 3)
+4. Topic settings:
+   - **Video length:** 30–60 seconds
+   - **Moderation:** ON (teacher reviews before publishing)
+   - **Camera and screen recording:** Both enabled
+   - **Text responses:** Enabled (for students who prefer writing)
+5. Share the Group join code or link in Google Classroom
+
+### How Students Use Flip
+1. Students go to flip.com and join with the Group code
+2. They open the current Topic and click **Record**
+3. They record a 30–60 second video responding to the prompt
+4. Teacher reviews and approves videos
+5. Students can watch and respond to each other's videos with video replies
+
+### Flip Prompts
+Each session folder contains a `flip-prompt.md` with the exact prompt for that session's Topic.
+
+### Why Microsoft Flip
+- **Free** for educators (Microsoft account or Google login)
+- **Moderated** — teacher approves all content before it's visible
+- **Parent-visible** — share the Topic link with parents so they can see their child's videos
+- **Async** — students can record between sessions, not just during live time
+- **Safe** — designed for K-12, COPPA/FERPA compliant
+- **Low barrier** — works on any device with a camera, no app required (web-based)
+
+### Tips
+- Assign Flip videos as homework in Google Classroom (link to the Topic)
+- Use between sessions to keep engagement alive
+- Encourage students to reply to their pen pal's video with their own video
+- Teacher can feature standout videos in the next live session
+
+---
+
+## 6. YouTube Unlisted Playlists (Cultural Videos)
+
+Curated video playlists for cultural context — unlisted so only people with the link can view.
+
+### Setup
+1. Sign in to YouTube with your school Google account
+2. Create one **playlist** per session:
+   - **Session 1 Playlist:** "Nakhla — Hello, Neighbor!" — videos about greetings, Israeli and Emirati daily life, kid-friendly cultural intros
+   - **Session 2 Playlist:** "Nakhla — Our World" — videos about food, music, games, and family traditions in both cultures
+   - **Session 3 Playlist:** "Nakhla — Friends Across the Shore" — videos about friendship, the Abraham Accords (kid-friendly), date palms, shared heritage
+3. Set each playlist to **Unlisted** (only accessible via direct link)
+4. Add 3–5 short videos per playlist (2–5 minutes each, age-appropriate)
+
+### Embedding in Google Classroom
+1. In Google Classroom, create a **Material** post under each session's Topic
+2. Paste the YouTube playlist link
+3. Title: "Watch Before Session [X]: Cultural Videos"
+4. Students can watch at home before the live session as preparation
+
+### Content Guidelines
+- All videos must be age-appropriate (8–12 years old)
+- Avoid any political or conflict-related content
+- Focus on daily life, traditions, food, music, nature, and geography
+- Include videos from both Israeli and Emirati creators where possible
+- Prefer short videos (under 5 minutes) to maintain attention
+
+### Tips
+- Unlisted playlists are not searchable — only people with the link can find them
+- Teacher can add/remove videos between sessions as needed
+- Use the YouTube "Add to Watch Later" feature to collect candidate videos before curating the playlist
+- Consider adding a comment on each video in Google Classroom explaining what to look for
+
+---
+
+## 7. WhatsApp (Parent Communications)
 
 ### Setup
 1. Create one WhatsApp group per class: **"Nakhla Parents — [School Name]"**
@@ -218,9 +265,9 @@ Replaces Google Jamboard (discontinued Nov 2024) and Google Sites. Padlet serves
 | When | What | Who Sends |
 |------|------|-----------|
 | 1 week before Session 1 | Welcome message + program overview | Coordinator |
-| 2 days before each session | Reminder + "ask your child about…" prompt | Teacher |
-| After each session | Parent tip (from `parent-tip.md`) | Teacher |
-| After Session 3 | Thank you + portfolio links (Padlet) + certificate | Coordinator |
+| 2 days before each session | Reminder + YouTube playlist link + "ask your child about…" prompt | Teacher |
+| After each session | Parent tip (from `parent-tip.md`) + Padlet link + Flip link | Teacher |
+| After Session 3 | Thank you + portfolio links (Padlet + Flip) + certificate | Coordinator |
 
 ### Message Templates
 Messages should be trilingual. Use the DeepL translation tool (`tools/translate.html`) to prepare messages.
@@ -238,7 +285,7 @@ EN: Your child will be part of a cultural exchange with children from [country].
 
 ---
 
-## 8. Translation Layer
+## 8. Translation Layer (DeepL + translate.html)
 
 ### DeepL API (Primary)
 1. Sign up for DeepL API Free at deepl.com/pro-api
@@ -247,8 +294,8 @@ EN: Your child will be part of a cultural exchange with children from [country].
 4. Enter your API key (stored in localStorage — never leaves your browser)
 
 ### Usage
-- Use for preparing all parent communications
-- Use for translating any ad-hoc content (discussion prompts, instructions)
+- Use for preparing all parent communications (WhatsApp messages)
+- Use for translating any ad-hoc content (discussion prompts, instructions, Flip prompts)
 - Free tier: 500,000 characters/month (sufficient for this program)
 
 ### Supported Language Codes
@@ -263,12 +310,11 @@ EN: Your child will be part of a cultural exchange with children from [country].
 - Arabic support is available
 - For the content packs, translations are pre-prepared (no API needed during sessions)
 
-### Google Translate Widget (Fallback)
+### Google Translate (Fallback)
 If DeepL is unavailable or Hebrew translation is needed:
 1. Go to translate.google.com — no account needed
 2. Supports Hebrew, Arabic, and English with no character limits
-3. For embedding in materials: use the Google Translate website directly
-4. No API key required — zero setup
+3. No API key required — zero setup
 
 ---
 
@@ -279,21 +325,22 @@ If DeepL is unavailable or Hebrew translation is needed:
 │                    BEFORE SESSION                     │
 │                                                       │
 │  Google Classroom ──→ Distribute vocab + worksheets   │
-│  WhatsApp ──→ Parent reminders                        │
+│  YouTube Playlists ──→ Cultural videos (homework)     │
+│  WhatsApp ──→ Parent reminders + playlist links       │
 │  DeepL/translate.html ──→ Prepare translations        │
-│  Kialo Edu ──→ Post async discussion (optional)       │
+│  Microsoft Flip ──→ Async video introductions         │
 └───────────────────────┬─────────────────────────────┘
                         │
 ┌───────────────────────▼─────────────────────────────┐
 │                    DURING SESSION                     │
 │                                                       │
-│  Google Meet (main room) ──→ Full group + wrap-up     │
+│  Zoom (main room) ──→ Full group + wrap-up            │
+│       │                                               │
+│       ├──→ Interpretation ──→ Hebrew / Arabic / EN    │
 │       │                                               │
 │       ├──→ Breakout rooms ──→ Pod pairs               │
 │       │                                               │
-│       └──→ Screen share ──→ Wooclap / Padlet          │
-│                                                       │
-│  (Whereby available as backup if Meet fails)          │
+│       └──→ Screen share ──→ Blooket / Padlet          │
 └───────────────────────┬─────────────────────────────┘
                         │
 ┌───────────────────────▼─────────────────────────────┐
@@ -301,7 +348,8 @@ If DeepL is unavailable or Hebrew translation is needed:
 │                                                       │
 │  Google Classroom ──→ Collect reflections             │
 │  Padlet ──→ Portfolio of approved student work        │
-│  WhatsApp ──→ Send parent tip + Padlet link           │
-│  Kialo Edu ──→ Continue async discussion              │
+│  Microsoft Flip ──→ Async pen pal videos              │
+│  WhatsApp ──→ Send parent tip + Padlet/Flip links     │
+│  YouTube ──→ Add new videos for next session          │
 └─────────────────────────────────────────────────────┘
 ```

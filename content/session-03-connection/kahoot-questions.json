@@ -1,5 +1,5 @@
 {
-  "_note": "Import these questions into Wooclap quiz feature (wooclap.com). Create a new event, add Quiz-type questions, and copy the question text and answer options below. Mark the correct answer for each.",
+  "_note": "Import these questions into Blooket as a Question Set (blooket.com). Create a new set, add each question with 4 answer options, and mark the correct answer. See blooket-setup.md in this folder for step-by-step instructions.",
   "title": "Nakhla Session 3: Friends Across the Shore!",
   "description": "Final review quiz — everything we learned across all 3 sessions",
   "questions": [
